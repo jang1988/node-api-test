@@ -298,6 +298,6 @@ app.delete("/api/products/:id", (req, res) => {
   res.json("Product deleted!");
 });
 
-app.listen(8800, () => {
+app.listen(80, () => {
   console.log("Connected to backend.");
 });
