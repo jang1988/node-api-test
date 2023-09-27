@@ -252,8 +252,6 @@ let products = [
   },
 ];
 
-const port = 80;
-
 // GET USERS
 app.get("/api/users", (req, res) => {
   res.json(users);
@@ -300,6 +298,6 @@ app.delete("/api/products/:id", (req, res) => {
   res.json("Product deleted!");
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 80, () => {
   console.log("Connected to backend.");
 });
